@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS owners;
 CREATE TABLE owners (
     owner_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255)
-)
+);
 
 CREATE TABLE dogs (
     dog_id INT NOT NULL,
