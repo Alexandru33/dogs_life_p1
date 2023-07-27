@@ -7,6 +7,7 @@ import java.util.List;
 
 public class DogHandler {
     private DogsRepository itsDogsRepo;
+
     public DogHandler(DogsRepository repo) {
         itsDogsRepo = repo;
     }
@@ -25,7 +26,7 @@ public class DogHandler {
         ourDog.setName(name);
         List<Dog> dogs = itsDogsRepo.findByName(ourDog);
 
-        if( dogs.size() == 1)
+        if (dogs.size() == 1)
             return dogs.get(0);
         else
             return null;
