@@ -21,9 +21,8 @@ public class HeroService {
 
     public List<Hero> getAllHeroes()
     {
-        List<Hero> allHeroes = heroRepository.findAll();
 
-        return allHeroes;
+        return heroRepository.findAll();
 
     }
 
