@@ -1,5 +1,6 @@
 package com.example.superheros;
 
+import com.example.superheros.controller.HeroController;
 import com.example.superheros.model.Hero;
 import com.example.superheros.repository.HeroRepository;
 import com.example.superheros.service.HeroService;
@@ -13,7 +14,7 @@ import java.util.List;
 @SpringBootApplication
 public class SuperherosApplication implements CommandLineRunner {
 	@Autowired
-	HeroService heroService;
+	HeroController heroController;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SuperherosApplication.class, args);
@@ -21,7 +22,7 @@ public class SuperherosApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Hero> heros = heroService.getHeroesStartingWithLetter("C");
+		List<Hero> heros = heroController.getAllHeroes();
 		for (Hero hero: heros) {
 			System.out.println(hero);
 		}
