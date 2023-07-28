@@ -1,24 +1,28 @@
 package com.example.superheros;
 
-import com.example.superheros.practice.Calculator;
+import com.example.superheros.model.Hero;
+import com.example.superheros.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class SuperherosApplication implements CommandLineRunner {
-
 	@Autowired
-	Calculator cal;
+	HeroRepository heroRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(SuperherosApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Hello World!");
-		int result = cal.addition(3, 4);
-		System.out.println(result);
+		List<Hero> heros = heroRepository.findHeroesNameStartingWithLetter("C%");
+		for (Hero hero: heros) {
+			System.out.println(hero);
+		}
 	}
 }
