@@ -1,4 +1,9 @@
-HELP.md
+@Component
+public class Calculator {
+    public int addition(int num1, int num2){
+            return num1+num2;
+                }
+                }HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
