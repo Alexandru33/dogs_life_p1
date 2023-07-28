@@ -2,6 +2,7 @@ package com.example.superheros;
 
 import com.example.superheros.model.Hero;
 import com.example.superheros.repository.HeroRepository;
+import com.example.superheros.service.HeroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +13,7 @@ import java.util.List;
 @SpringBootApplication
 public class SuperherosApplication implements CommandLineRunner {
 	@Autowired
-	HeroRepository heroRepository;
+	HeroService heroService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SuperherosApplication.class, args);
@@ -20,7 +21,7 @@ public class SuperherosApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Hero> heros = heroRepository.findHeroesNameStartingWithLetter("C%");
+		List<Hero> heros = heroService.getHeroesStartingWithLetter("C");
 		for (Hero hero: heros) {
 			System.out.println(hero);
 		}
