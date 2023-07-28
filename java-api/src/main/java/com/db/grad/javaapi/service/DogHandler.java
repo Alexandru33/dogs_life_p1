@@ -2,17 +2,19 @@ package com.db.grad.javaapi.service;
 
 import com.db.grad.javaapi.model.Dog;
 import com.db.grad.javaapi.repository.DogsRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class DogHandler {
+@Service
+public class DogHandler  {
     private DogsRepository itsDogsRepo;
 
     public DogHandler(DogsRepository repo) {
         itsDogsRepo = repo;
     }
 
-    public long addDog(Dog theDog) {
+    public Dog addDog(Dog theDog) {
         return itsDogsRepo.save(theDog);
     }
 
@@ -33,10 +35,13 @@ public class DogHandler {
     }
 
     public Dog getDogById(long id) {
-        return itsDogsRepo.findById(id);
+
+        return itsDogsRepo.findById(id).get();
     }
 
-    public long updateDogDetails(Dog dogToBeUpdated) {
+    public Dog updateDogDetails(Dog dogToBeUpdated) {
+
+        // so we need to delete the dog and put it back with updated details
         return itsDogsRepo.save(dogToBeUpdated);
     }
 
