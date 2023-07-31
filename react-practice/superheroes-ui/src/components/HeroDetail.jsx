@@ -1,13 +1,14 @@
 import React from 'react'
 import batman from '../images/batman.jpg'
 
-const HeroDetail = () => {
+const HeroDetail = (props) => {
+    
   return (
     <div>
-        <img src={batman} alt="Batman" height="250px"/>
-        <p id="blue-alias">Alias: Batman</p>
-        <p class="green-class">Name: Bruce Wayne</p>
-        <button class="green-class">Like</button> 
+      <img src={batman} alt="Batman" height="250px"/>
+      <p id="blue-alias">Alias: {props.info.alias}</p>
+      <p className="green-class">Name: {props.info.name}</p>
+      <button className="green-class">Like</button>   
     </div>
   )
 }
