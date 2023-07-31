@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroDetail from './HeroDetail'
+import Row from 'react-bootstrap/Row'
 
 const AllHeroes = () => {
     const heroes = [
@@ -15,9 +16,13 @@ const AllHeroes = () => {
         {"id":10,"name":"Dick Grayson","alias":"Nightwing","superpower":"Acrobatics","teamID":5}
         ]
     return (
-        heroes.map(hero=>(
-            <HeroDetail info={hero} key={hero.id.toString}/>
-        ))
+        <Row>
+            {heroes.map(hero => (
+                <div className='container' key={hero.id}>
+                    <HeroDetail info={hero}/>
+                </div>
+            ))}
+        </Row>
     )
 }
 
