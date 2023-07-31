@@ -1,5 +1,5 @@
 import './App.css';
-import HeroDetail from './components/HeroDetail';
+import HeroDetail from './components/HeroDetail.jsx';
 
 function App() {
   return (
