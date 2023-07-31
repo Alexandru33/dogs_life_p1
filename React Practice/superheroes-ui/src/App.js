@@ -1,8 +1,8 @@
 import './App.css';
-import HeroDetail from './components/HeroDetail.jsx';
+import AllHeroes from './components/AllHeroes';
 function App() {
     return (
-          <HeroDetail/>
+          <AllHeroes/>
             );
     }
 
