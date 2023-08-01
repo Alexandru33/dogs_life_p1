@@ -6,9 +6,6 @@ import { getAllDogs } from '../service/dogs-service'
 
 const AllDogs = () => {
 
-  const [total, setTotal] = useState(0);
-
-
 
 const [dogs,setDogs] = useState([]);
 

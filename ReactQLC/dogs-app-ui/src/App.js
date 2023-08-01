@@ -19,7 +19,7 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/alldogs">All Dogs</Nav.Link>
-              <Nav.Link href="/adddog">Add Dog</Nav.Link>
+              <Nav.Link href="/adddogs">Add Dog</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
