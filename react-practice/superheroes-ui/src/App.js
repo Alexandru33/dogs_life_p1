@@ -24,9 +24,9 @@ function App() {
       </Navbar>
 
       <Routes>
-        <Route path="/allheroes" element={AllHeroes} />
-        <Route path="/addhero" element={HeroForm} />
-        <Route path="/" element={AllHeroes} />
+        <Route path="/allheroes" element={<AllHeroes/>} />
+        <Route path="/addhero" element={<HeroForm/>} />
+        <Route path="/" element={<AllHeroes/>} />
       </Routes>
     </>
     
