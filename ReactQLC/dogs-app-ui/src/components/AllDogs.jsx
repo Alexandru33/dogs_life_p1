@@ -2,9 +2,9 @@ import React from 'react'
 import DogDetail from './DogDetail'
 import Row from 'react-bootstrap/Row'
 import { useState, useEffect} from 'react'
-import { getAllDogs } from '../services/hero-service'
+import { getAllDogs } from '../service/dogs-service'
 
-const AllHeroes = () => {
+const AllDogs = () => {
 
   const [total, setTotal] = useState(0);
 

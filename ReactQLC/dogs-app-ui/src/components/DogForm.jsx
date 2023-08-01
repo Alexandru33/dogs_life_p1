@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import { useState} from 'react'
-import { saveDog } from '../services/dogs-service'
+import { saveDog } from '../service/dogs-service'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -36,7 +36,7 @@ const handleSubmit =(event)=>{
     dog.age = age;
     dog.owner = owner;
 
-    saveHero(hero)
+    saveDog(dog)
    .then(res => {
       setName('');
       setAge('');

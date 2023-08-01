@@ -24,7 +24,7 @@ const DogDetail = (props ) => {
       
       
       <Row>
-        <Col><Button variant="primary" onClick={getOwner}>Show owner</Button></Col>
+        <Col><Button variant="primary">Show owner</Button></Col>
         <Col><Card.Text >Likes: {counter}</Card.Text > </Col>
       </Row>
       
