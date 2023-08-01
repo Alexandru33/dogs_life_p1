@@ -11,17 +11,20 @@ import { getOwner } from '../service/dogs-service'
 
 
 const DogDetail = (props ) => {
-  const [owner,setOwner] = useState([]);
+  const [owner,setOwner] = useState('');
   const[counter, setCounter] = useState(0);
   useEffect(()=>{
     getDogFromAPI();}, 
     []
   );
+ const [ok,setOk]=useState(false)
   
-  const getDogFromAPI = ()=>{
-    getOwner(props.info.name)
+  const getDogFromAPI = (arg)=>{
+    getOwner(arg)
     .then(res => {
         setOwner(res.data);
+        console.log(res.data)
+        setOk(true)
     })
     .catch(err => {
         
@@ -38,8 +41,13 @@ const DogDetail = (props ) => {
       
       
       <Row>
-        <Col><Button variant="primary" onClick={getDogFromAPI}>Show owner</Button></Col>
-        <Col><Card.Text >Owner: {owner}</Card.Text > </Col>
+        <Col><Button variant="primary" onClick={()=>{getDogFromAPI(props.info.name)}}>Show owner</Button></Col>
+        {ok==false}
+        <><Col><Card.Text >Owner: {owner}</Card.Text > </Col></>
+        :
+        <>
+        </>
+        
       </Row>
       
     

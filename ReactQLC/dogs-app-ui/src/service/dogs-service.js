@@ -11,6 +11,7 @@ export function saveDog(dog) {
 
 }
 
-export function getOwner(dog) {
-    return http.get( '/owner/${dog.id}');
+export function getOwner(dogName) {
+    let name="/owners/"+dogName;
+    return http.get(name);
 }
