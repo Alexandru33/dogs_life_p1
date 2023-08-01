@@ -11,6 +11,7 @@ import com.example.superheroes.repository.HeroRepository;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins="http://localhost:3000")
 public class HeroController {
 
     @Autowired
