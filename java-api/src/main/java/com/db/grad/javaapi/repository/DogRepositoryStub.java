@@ -1,11 +1,13 @@
 package com.db.grad.javaapi.repository;
 
+
 import com.db.grad.javaapi.model.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DogsRepositoryStub implements DogsRepository {
+/*
+public abstract class DogsRepositoryStub implements DogsRepository {
     private ArrayList<Dog> itsDogs = new ArrayList<>();
 
     private long addDog(Dog theDog) {
@@ -16,7 +18,7 @@ public class DogsRepositoryStub implements DogsRepository {
         return result;
     }
 
-    @Override
+   // @Override
     public Dog findById(long id) {
         Dog result = null;
 
@@ -41,7 +43,7 @@ public class DogsRepositoryStub implements DogsRepository {
         return result;
     }
 
-    @Override
+    //@Override
     public long save(Dog aDog) {
         Dog retrievedDog = null;
         long result = -1;
@@ -59,7 +61,7 @@ public class DogsRepositoryStub implements DogsRepository {
         return result;
     }
 
-    @Override
+   // @Override
     public boolean delete(Dog aDog) {
         boolean result = false;
         long initialSize = itsDogs.size();
@@ -76,7 +78,7 @@ public class DogsRepositoryStub implements DogsRepository {
         return this.itsDogs.size();
     }
 
-    @Override
+   // @Override
     public  boolean existsById( long id )
     {
         boolean result = false;
@@ -97,3 +99,5 @@ public class DogsRepositoryStub implements DogsRepository {
     }
 
 }
+
+*/
